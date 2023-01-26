@@ -1,7 +1,9 @@
 <template>
-  <div></div>
+  <SurveysList />
 </template>
 
-<script setup></script>
+<script setup>
+import SurveysList from "@/components/SurveysList.vue";
+</script>
 
 <style scoped module></style>
