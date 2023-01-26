@@ -15,10 +15,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { getSurveys } from "@/services/api";
 import type { ISurvey } from "@/types/survey";
 
 const surveys = ref<ISurvey[]>([]);
+
+onMounted(async () => {
+  surveys.value = await getSurveys();
+});
 </script>
 
 <style scoped module></style>
