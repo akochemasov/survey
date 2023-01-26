@@ -6,6 +6,7 @@ export const mockSurvey: ISurvey[] = [
     status: "active",
     dateEndTime: "30.01.2003",
     title: "Лучший ресторан фастфуда в городе",
+    author: "Ivan",
     answers: [
       {
         id: "0",
@@ -29,6 +30,7 @@ export const mockSurvey: ISurvey[] = [
     status: "active",
     dateEndTime: "01.01.2003",
     title: "Лучший кофе",
+    author: "Anonymous",
     answers: [
       {
         id: "0",

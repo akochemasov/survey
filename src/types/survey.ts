@@ -9,6 +9,7 @@ export interface IAnswer {
 export interface ISurvey {
   id: string;
   title: string;
+  author: string;
   status: IStatus;
   dateEndTime: string;
   answers: IAnswer[];
