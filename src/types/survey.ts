@@ -19,4 +19,5 @@ export interface ISurvey {
   status: IStatus;
   dateEndTime: string;
   answers: IAnswer[];
+  totalVoices: number;
 }

@@ -7,6 +7,7 @@ export const mockSurveyPopular: ISurvey[] = [
     dateEndTime: "30.01.2003",
     title: "Лучший ресторан фастфуда в городе",
     author: "Ivan",
+    totalVoices: 10,
     answers: [
       {
         id: "0",
@@ -31,6 +32,7 @@ export const mockSurveyPopular: ISurvey[] = [
     dateEndTime: "01.01.2003",
     title: "Лучший кофе",
     author: "Anonymous",
+    totalVoices: 60,
     answers: [
       {
         id: "0",
@@ -53,6 +55,7 @@ export const mockSurveyLast: ISurvey[] = [
     dateEndTime: "30.01.2003",
     title: "Сколько вы спите?",
     author: "Sonya",
+    totalVoices: 25,
     answers: [
       {
         id: "0",
