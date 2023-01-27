@@ -2,11 +2,11 @@
   <v-container>
     <v-row v-for="(item, index) in surveys" :key="index" align="center">
       <v-col class="mx-auto" width="100%">
-        <v-card>
+        <v-card outlined shaped elevation="4">
           <v-card-title>{{ item.title }}</v-card-title>
-          <v-card-text>{{ item.status }}</v-card-text>
+          <v-card-text>От {{ item.author }}</v-card-text>
           <v-card-actions>
-            <v-btn color="primary" @click="() => {}">View Details</v-btn>
+            <v-btn color="primary" @click="() => {}">Подробнее</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -15,14 +15,17 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref, defineProps, watchEffect } from "vue";
 import { getSurveys } from "@/services/api";
 import type { ISurvey } from "@/types/survey";
+import { TypeSurvey } from "@/types/survey";
+
+const props = defineProps<{ type: TypeSurvey }>();
 
 const surveys = ref<ISurvey[]>([]);
 
-onMounted(async () => {
-  surveys.value = await getSurveys();
+watchEffect(async () => {
+  surveys.value = await getSurveys({ type: props.type });
 });
 </script>
 
