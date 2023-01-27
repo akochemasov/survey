@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import SurveysListView from "@/views/HomeView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
+import SurveyItemView from "@/views/SurveyItemView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: "/surveys/:type?",
       name: "surveys",
       component: SurveysListView,
+    },
+    {
+      path: "/survey/:id",
+      name: "survey",
+      component: SurveyItemView,
     },
     {
       path: "/:pathMatch(.*)*",
