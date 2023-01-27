@@ -34,8 +34,10 @@ import { ref, defineProps, watchEffect } from "vue";
 import { getSurveys } from "@/services/api";
 import type { ISurvey } from "@/types/survey";
 import { TypeSurvey } from "@/types/survey";
+import { useRouter } from "vue-router";
 
 const props = defineProps<{ type: TypeSurvey }>();
+const router = useRouter();
 
 const surveys = ref<ISurvey[]>([]);
 
@@ -44,7 +46,7 @@ watchEffect(async () => {
 });
 
 const onClick = (item: ISurvey) => {
-  console.log(item);
+  router.push({ path: `/survey/${item.id}` });
 };
 </script>
 

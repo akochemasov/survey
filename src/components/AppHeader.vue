@@ -4,9 +4,9 @@
   <v-spacer />
 
   <v-tabs centered>
-    <v-tab :to="`/survey/${TypeSurvey.popular}`">Популярные</v-tab>
-    <v-tab :to="`/survey/${TypeSurvey.last}`">Последние</v-tab>
-    <v-tab :to="`/survey/${TypeSurvey.my}`">Мои</v-tab>
+    <v-tab :to="`/surveys/${TypeSurvey.popular}`">Популярные</v-tab>
+    <v-tab :to="`/surveys/${TypeSurvey.last}`">Последние</v-tab>
+    <v-tab :to="`/surveys/${TypeSurvey.my}`">Мои</v-tab>
   </v-tabs>
 
   <v-spacer />
