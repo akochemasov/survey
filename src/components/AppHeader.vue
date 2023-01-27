@@ -4,9 +4,9 @@
   <v-spacer />
 
   <v-tabs centered>
-    <v-tab @click="onTabClick(0)">Активные</v-tab>
-    <v-tab @click="onTabClick(1)">Мои</v-tab>
-    <v-tab @click="onTabClick(2)">Прошедшие</v-tab>
+    <v-tab :to="`/survey/${TypeSurvey.popular}`">Популярные</v-tab>
+    <v-tab :to="`/survey/${TypeSurvey.last}`">Последние</v-tab>
+    <v-tab :to="`/survey/${TypeSurvey.my}`">Мои</v-tab>
   </v-tabs>
 
   <v-spacer />
@@ -16,10 +16,7 @@
 
 <script setup lang="ts">
 import { mdiChartBoxOutline, mdiLogin } from "@mdi/js";
-
-const onTabClick = (index: number) => {
-  console.log("tab", index);
-};
+import { TypeSurvey } from "@/types/survey";
 </script>
 
 <style scoped></style>
