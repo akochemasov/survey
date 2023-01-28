@@ -16,7 +16,11 @@
                   <v-card-text>От {{ item.author }}</v-card-text>
                 </div>
                 <div class="d-flex align-center mr-5">
-                  <v-avatar :icon="mdiThumbUpOutline" />
+                  <v-icon
+                    :icon="mdiAccountMultipleCheck"
+                    size="large"
+                    class="mr-2"
+                  />
                   <div class="text-justify">{{ item.totalVoices }}</div>
                 </div>
               </div>
@@ -29,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { mdiThumbUpOutline } from "@mdi/js";
+import { mdiAccountMultipleCheck } from "@mdi/js";
 import { ref, defineProps, watchEffect } from "vue";
 import { getSurveys } from "@/services/api";
 import type { ISurvey } from "@/types/survey";
