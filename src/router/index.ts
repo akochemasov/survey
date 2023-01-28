@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import SurveysListView from "@/views/HomeView.vue";
+import SurveysListView from "@/views/SurveyListView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 import SurveyItemView from "@/views/SurveyItemView.vue";
 
