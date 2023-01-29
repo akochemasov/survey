@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <template :key="index" v-for="(item, index) in surveys">
+    <template :key="item.id" v-for="item in surveys">
       <v-row align="center">
         <v-col class="mx-auto" width="100%">
           <v-hover v-slot="{ isHovering, props }">
