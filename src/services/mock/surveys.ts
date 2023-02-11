@@ -2,12 +2,13 @@ import type { ISurvey } from "@/types/survey";
 
 export const mockSurveyPopular: ISurvey[] = [
   {
-    id: "1",
+    id: "0",
     status: "active",
     dateEndTime: "30.01.2003",
     title: "Лучший ресторан фастфуда в городе",
     author: "Ivan",
     totalVoices: 10,
+    //можно не присылать
     answers: [
       {
         id: "0",
@@ -27,12 +28,13 @@ export const mockSurveyPopular: ISurvey[] = [
     ],
   },
   {
-    id: "2",
+    id: "1",
     status: "active",
     dateEndTime: "01.01.2003",
     title: "Лучший кофе",
     author: "Anonymous",
     totalVoices: 60,
+    //можно не присылать
     answers: [
       {
         id: "0",
@@ -50,12 +52,13 @@ export const mockSurveyPopular: ISurvey[] = [
 
 export const mockSurveyLast: ISurvey[] = [
   {
-    id: "1",
+    id: "3",
     status: "active",
     dateEndTime: "30.01.2003",
     title: "Сколько вы спите?",
     author: "Sonya",
     totalVoices: 25,
+    //можно не присылать
     answers: [
       {
         id: "0",

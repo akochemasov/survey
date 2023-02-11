@@ -10,6 +10,7 @@ export interface IAnswer {
   id: string;
   text: string;
   voices: number;
+  selected?: boolean; // пользователь выбрал этот вариант?
 }
 
 export interface ISurvey {
